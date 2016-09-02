@@ -27,3 +27,6 @@ theme: minima
 
 paginate: 5
 paginate_path: "/myblog/page:num/"
+
+#gems
+gems: [jekyll-paginate]
