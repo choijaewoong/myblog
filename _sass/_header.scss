@@ -36,9 +36,6 @@
     -webkit-transition: -webkit-transform 0.3s;
     -moz-transition: -moz-transform 0.3s;
     transition: transform 0.3s;
-    .cd-secondary-nav a {
-      color: #fff;
-    }
   }
   .cd-header.is-visible {
     /* if the user changes the scrolling direction, we show the header */
@@ -47,6 +44,9 @@
     -ms-transform: translate3d(0, 100%, 0);
     -o-transform: translate3d(0, 100%, 0);
     transform: translate3d(0, 100%, 0);
+    .cd-logo a, .cd-secondary-nav a {
+      color: #fff;
+    }    
   }
 }
 

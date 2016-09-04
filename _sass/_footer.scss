@@ -1,6 +1,50 @@
 .footer {
+  position: relative;
   box-sizing: border-box;
   height: $footer_height;
   border-top: 1px solid $color-primary-gray;
   text-align: center;
+  color: $color-primary-dark-gray;
+  font-size: 12px;
+  line-height: 16px;
+
+  &_address {
+    position: absolute;
+    bottom: 19px;
+    right: 5px;
+    text-align: right;
+  }
+  &_link {
+    &:hover {
+    text-decoration: none;
+    }
+  }
+  &_copy {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    margin: 0;
+  }
+}
+@media screen and (min-width: 640px) {
+  .footer {
+    &_address {
+      bottom: 50%;
+      -webkit-transform: translateY(50%);
+      -moz-transform: translateY(50%);
+      -ms-transform: translateY(50%);
+      -o-transform: translateY(50%);
+      transform: translateY(50%);
+      text-align: right;
+    }
+    &_copy {
+      bottom: 50%;
+      right: 50%;
+      -webkit-transform: translate(50%, 50%);
+      -moz-transform: translate(50%, 50%);
+      -ms-transform: translate(50%, 50%);
+      -o-transform: translate(50%, 50%);
+      transform: translate(50%, 50%);
+    }
+  }
 }
