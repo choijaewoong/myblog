@@ -23,6 +23,8 @@ github_username:  choijaewoong
 
 # Build settings
 markdown: kramdown
+kramdown:
+  input: GFM
 theme: minima
 
 #gems

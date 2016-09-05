@@ -3,9 +3,11 @@
     text-overflow: ellipsis;
     overflow: hidden;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 5;
 }
-
+html {
+  font-family: helvetica, sans-serif;
+}
 html, body {
   height: 100%;
 }
