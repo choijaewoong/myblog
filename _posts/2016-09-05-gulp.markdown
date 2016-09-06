@@ -1,0 +1,69 @@
+---
+layout: post
+title:  "Gulp"
+date:   2016-09-05 00:00:00 +0900
+categories: jekyll update
+excerpt: "Gulp 설치 및 사용방법"
+---
+## node, npm 설치
+* $ apt-get install curl
+* $ curl -sL https://deb.nodesource.com/setup_6.x \| bash -
+* $ apt-get install -y nodejs
+* 설치 확인
+  * $ node —version
+  * $ npm —version
+
+<br>
+
+----------------
+<br>
+
+## package.json
+* node.js 프로젝트에서 사용되는 의존 모듈 정보가 담기는 json 파일
+* $ npm init 명령어를 통해 새로 생성
+* name, version등의 기본 정보를 입력 하게 되면 package.json 생성
+* dependencies / devDependencies
+  * 의존성을 규정하여 모듈들을 관리하기 위한 요소,
+  * dependecncies - 운영에 필요한 의존성 모듈의 범위를 지정
+  * devDependencies - 개발에 필요한 의존성 모듈의 범위를 지정
+
+<br>
+
+----------------
+<br>
+
+## npm 모듈
+* 전역 모듈
+  * npm install -g [모듈명] ( mac 의 경우 앞에 sudo 입력 )
+* 로컬 모듈
+  * npm install --save [모듈명]
+  * --save 옵션을 추가해서 package.json의 dependencies에 자동으로 추가
+  * --save-dev 옵션은 devDependencies에 추가되도록 함.
+
+<br>
+
+----------------
+<br>
+
+## gulp 설치 및 기본 구조
+* 전역 유틸리티로 gulp cli 설치
+  * $ npm install -g gulp-cli
+* 로컬에 gulp 설치
+  * $ npm install —save-dev gulp
+* Gulpfile.js 파일 생성
+  * $ touch Gulpfile.js
+* task 기본 구조
+{% highlight javascript %}
+var gulp = require('gulp');
+
+gulp.task('default', function() {
+  return gulp.src('/')
+        .pipe( /* task */ )  // task
+        .pipe(gulp.dest('/'));   // 마지막 결과물 저장 경로  
+});
+{% endhighlight %}
+* Gulp 기본 API
+    * task
+    * src
+    * watch
+    * dest
